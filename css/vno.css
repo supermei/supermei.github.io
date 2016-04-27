@@ -5947,7 +5947,7 @@ html {
 }
 body {
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  font-size: 1em;
+  font-size: 0.9em;
   color: #666;
   -webkit-font-smoothing: antialiased;
 }
@@ -5959,10 +5959,10 @@ body {
 }
 a {
   text-decoration: none;
-  color: #bf1827;
+  color: #689ef8;
 }
 a:hover {
-  color: #7b0f19;
+  color: #2457ac;
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -6136,10 +6136,10 @@ pre code {
 .content-wrapper {
   z-index: 800;
   width: 70%;
-  margin-left: 30%;
+  margin-left: 24%;
 }
 .content-wrapper__inner {
-  margin: 0 10%;
+  margin: 0 7%;
   padding: 50px 0;
 }
 .footer {
@@ -6252,7 +6252,7 @@ hr {
   background-size: cover;
 }
 .panel-cover--collapsed {
-  width: 30%;
+  width: 24%;
   max-width: 500px;
 }
 .panel-cover--overlay {
@@ -6357,7 +6357,7 @@ hr {
 }
 .btn,
 .navigation__item a {
-  padding: 10px 20px;
+  padding: 8px 19px;
   border: 1px solid #bf1827;
   border-radius: 20px;
   font-size: 0.9em;
@@ -6373,7 +6373,7 @@ hr {
   border-color: #7b0f19;
 }
 .btn-border-small {
-  border: 1px solid #bf1827;
+  border: 1px solid #689ef8;
   border-radius: 20px;
   padding: 6px 8px;
   font-size: 0.8em;

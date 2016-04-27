@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>呃呃呃e&#39;e | SuperMei</title>
+    <title>svg入门知识 | SuperMei</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="爱好电影、音乐和书籍，尤其喜爱许巍、李健及王小波。擅长Java，JavaScript，喜欢用NodeJs编写一些有趣的应用。关注互联网、科技、敏捷开发以及JavaNIO。">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="呃呃呃e&#39;e | SuperMei">
+    <meta name="twitter:title" content="svg入门知识 | SuperMei">
     <meta name="twitter:description" content="爱好电影、音乐和书籍，尤其喜爱许巍、李健及王小波。擅长Java，JavaScript，喜欢用NodeJs编写一些有趣的应用。关注互联网、科技、敏捷开发以及JavaNIO。">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="呃呃呃e&#39;e | SuperMei">
+    <meta property="og:title" content="svg入门知识 | SuperMei">
     <meta property="og:description" content="爱好电影、音乐和书籍，尤其喜爱许巍、李健及王小波。擅长Java，JavaScript，喜欢用NodeJs编写一些有趣的应用。关注互联网、科技、敏捷开发以及JavaNIO。">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="SuperMei" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://yoursite.com/2016/04/25/super/"/>
+    <link rel="canonical" href="http://yoursite.com/2016/04/27/svg入门知识/"/>
 
     
 </head>
@@ -143,13 +143,49 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2016-04-25T02:05:24.000Z" class="post-list__meta--date date">2016-04-25</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
+      <time datetime="2016-04-27T01:40:20.000Z" class="post-list__meta--date date">2016-04-27</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/IT技术/">IT技术</a>
+</span>
     </div>
-    <h1 class="post-title">呃呃呃e&#39;e</h1>
+    <h1 class="post-title">svg入门知识</h1>
   </header>
 
   <section class="post">
-    
+    <h3 id="1-svg是什么？跟canvas的区别在哪里？"><a href="#1-svg是什么？跟canvas的区别在哪里？" class="headerlink" title="1. svg是什么？跟canvas的区别在哪里？"></a>1. svg是什么？跟canvas的区别在哪里？</h3><p>首先，在学习svg之前，要先了解H5中的canvas和svg的区别。对此，w3school对此介绍的比较精炼。<br><strong> SVG </strong></p>
+<blockquote>
+<p>SVG 是一种使用 XML 描述 2D 图形的语言。<br>SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript 事件处理器。<br>在 SVG 中，每个被绘制的图形均被视为对象。如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。</p>
+</blockquote>
+<p><strong>Canvas</strong></p>
+<blockquote>
+<p>Canvas 通过 JavaScript 来绘制 2D 图形。<br>Canvas 是逐像素进行渲染的。<br>在 canvas 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。</p>
+</blockquote>
+<p><strong>SVG</strong></p>
+<ul>
+<li>不依赖分辨率</li>
+<li>支持事件处理器</li>
+<li>最适合带有大型渲染区域的应用程序（比如谷歌地图）</li>
+<li>复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）</li>
+<li>不适合游戏应用</li>
+</ul>
+<p><strong>Canvas</strong></p>
+<ul>
+<li>依赖分辨率</li>
+<li>不支持事件处理器</li>
+<li>弱的文本渲染能力</li>
+<li>能够以 .png 或 .jpg 格式保存结果图像</li>
+<li>最适合图像密集型的游戏，其中的许多对象会被频繁重绘</li>
+</ul>
+<p>简单的说，就是Canvas是使用Javascript程序绘制（动态生成），而SVG是使用XML文档描述来绘图。<br>从这点来看：SVG更适合用来做动态交互，而且SVG绘图很容易编辑，只需要增加或移除相应的元素就可以了。<br>同时SVG是基于矢量的，所有它能够很好的处理图形大小的改变。Canvas是基于位图的图像，它不能够改变大小，只能缩放显示；所以说Canvas更适合用来实现类似于Flash能做的事情(当然现在Canvas与Flash相比还有一些不够完善的地方)。</p>
+<p><strong>从上面我们可以知道二者是有不同用途的，作为一个开发者，应该做的是理解应用程序的具体需求并选择正确的技术实现它。</strong></p>
+<h3 id="2-svg学习之前应具备的基础知识？"><a href="#2-svg学习之前应具备的基础知识？" class="headerlink" title="2. svg学习之前应具备的基础知识？"></a>2. svg学习之前应具备的基础知识？</h3><p><strong>SVG是使用XML来描述二维图形的绘图程序的语言</strong><br>下面的例子是一个简单的 SVG 文件的例子。SVG 文件必须使用 .svg 后缀来保存<br>    &lt;?xml version=”1.0” standalone=”no”?&gt;</p>
+<pre><code>&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; &quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;
+
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+
+&lt;circle cx=&quot;100&quot; cy=&quot;50&quot; r=&quot;40&quot; stroke=&quot;black&quot;stroke-width=&quot;2&quot; fill=&quot;red&quot;/&gt;
+
+&lt;/svg&gt;
+</code></pre>
   </section>
 
 </article>
