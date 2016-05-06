@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>SVG图形的拖拽 | SuperMei</title>
+    <title>datatable扩展属性的应用 | SuperMei</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="爱好电影。">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="SVG图形的拖拽 | SuperMei">
+    <meta name="twitter:title" content="datatable扩展属性的应用 | SuperMei">
     <meta name="twitter:description" content="爱好电影。">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="SVG图形的拖拽 | SuperMei">
+    <meta property="og:title" content="datatable扩展属性的应用 | SuperMei">
     <meta property="og:description" content="爱好电影。">
 
     
@@ -35,7 +35,7 @@
     <meta name="generator" content="hexo"/>
     
 
-    <link rel="canonical" href="http://yoursite.com/2016/05/03/SVG图形简单的拖拽/"/>
+    <link rel="canonical" href="http://yoursite.com/2016/05/04/datatable扩展属性的应用/"/>
 
     
 </head>
@@ -141,19 +141,18 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2016-05-03T00:56:14.000Z" class="post-list__meta--date date">2016-05-03</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+      <time datetime="2016-05-04T01:54:57.000Z" class="post-list__meta--date date">2016-05-04</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
   <a class="tag-link" href="/tags/IT技术/">IT技术</a>
 </span>
     </div>
-    <h1 class="post-title">SVG图形的拖拽</h1>
+    <h1 class="post-title">datatable扩展属性的应用</h1>
   </header>
 
   <section class="post">
-    <p>使用过一款插件叫做“Svg Pan Zoom-jQuery”，这个插件可实现SVG图像的平移和缩放，可以通过编程的方式或通过鼠标/触摸事件。具体的使用方法可以在github上面可看到。英文版，很详细。</p>
-<p><a href="https://github.com/DanielHoffmann/jquery-svg-pan-zoom" target="_blank" rel="external">打开jquery-svg-pan-zoom.js在github上的链接</a></p>
-<p>另外一款插件是在使用snap.svg基础上的拓展。</p>
-<p><a href="https://github.com/huei90/snap.svg.zpd" target="_blank" rel="external">打开snap.svg.zpd.js在github上的链接</a></p>
-<p>那什么是snap.svg呢？说实话，snap.svg的官网站中的使用api其实真的看不太懂，还好有位大牛简单翻译和整理了中文版本，虽然没有官方文档中的详细，但是所需要的基本上</p>
+    <p>创建扩展属性展示函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var createExtensionRender = function (targetName) &#123;</span><br><span class="line">var categoryList = Auto.AjaxAgent.ExtensionField.GetExtensionFieldCategoryList(targetName)</span><br><span class="line">var extensionCategory = function (data, type, full, meta) &#123;</span><br><span class="line">    var content = &apos;&apos;;</span><br><span class="line">    $.each(categoryList, function (i, elem) &#123;</span><br><span class="line">        content += &apos;&lt;button class=&quot;btn btn-xs btn-flat btn-success extensionFieldSet&quot; data-itemId=&quot;&apos; + data + &apos;&quot; data-categoryId=&quot;&apos; + elem.ExtensionFieldCategory_Id + &apos;&quot; data-categoryName=&quot;&apos; + elem.ExtensionFieldCategory_Name + &apos;&quot;  &gt;&apos; + elem.ExtensionFieldCategory_Name + &apos;&lt;/button&gt;&amp;nbsp;&apos;;</span><br><span class="line">    &#125;);</span><br><span class="line">    return content;</span><br><span class="line">&#125;</span><br><span class="line">return &#123;</span><br><span class="line">    IsVisible: categoryList &amp;&amp; categoryList.length &gt; 0,</span><br><span class="line">    Render: extensionCategory</span><br><span class="line">&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>结合datatable跟扩展属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    var extensionCategory = createExtensionRender(&quot;User&quot;);</span><br><span class="line">    $(&apos;#userTable&apos;).DataTable(&#123;</span><br><span class="line">        &quot;ajax&quot;: &#123;</span><br><span class="line">            &quot;url&quot;: Auto.AjaxAgent.User.GetUserListForPaged.URL,</span><br><span class="line">            &quot;type&quot;: &quot;POST&quot;,</span><br><span class="line">            &quot;data&quot;: SearchName</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;order&quot;: [[1, &quot;desc&quot;]],</span><br><span class="line">        &quot;columns&quot;: [</span><br><span class="line">            &#123;&quot;render&quot;: function (data, type, full, meta) &#123;return meta.row + 1;&#125;&#125;,</span><br><span class="line">            &#123; &quot;data&quot;: &quot;User_Name&quot;, &quot;title&quot;: &quot;用户登录名&quot; &#125;,</span><br><span class="line">            &#123; &quot;data&quot;: &quot;User_Id&quot;, &quot;render&quot;: extensionCategory.Render, &quot;visible&quot;: extensionCategory.IsVisible, &quot;title&quot;: &quot;扩展属性&quot; &#125;,</span><br><span class="line">            &#123;&quot;data&quot;: &quot;User_Id&quot;,&quot;render&quot;: UpdateAndDelete,&quot;title&quot;: &quot;操作&quot;&#125;]</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
   </section>
 
@@ -162,7 +161,7 @@
 
 <section class="post-comments">
   <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="http://yoursite.com/2016/05/03/SVG图形简单的拖拽/" data-title="SVG图形的拖拽" data-url="http://yoursite.com/2016/05/03/SVG图形简单的拖拽/"></div>
+  <div class="ds-thread" data-thread-key="http://yoursite.com/2016/05/04/datatable扩展属性的应用/" data-title="datatable扩展属性的应用" data-url="http://yoursite.com/2016/05/04/datatable扩展属性的应用/"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
