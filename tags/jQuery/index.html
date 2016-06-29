@@ -143,83 +143,50 @@
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/05/04/datatable扩展属性的应用/" title="link to post.title">datatable扩展属性的应用</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2016/06/29/EventProperties/" title="link to post.title">事件对象的属性</a></h2>
       <p class="excerpt">
     
-      创建扩展属性展示函数
-1234567891011121314var createExtensionRender = function (targetName) &amp;#123;var categoryList = Auto.AjaxAgent.ExtensionField.GetExtensionFieldCategoryList(targetName)var extensionCategory = function (data, type, full, meta) &amp;#123;    var co
+      jQuery在遵循W3C规范下，对事件对象的常用属性进行了封装，使得事件处理在各大浏览器下都可以正常运行而不需要进行浏览器类型判断。
+(1)event.type该方法的作用是可以获取到事件的类型。
+$(&quot;a&quot;).click(function(){
+
+alert(event.type);//获取事件类型
+
+return false;//阻止链接跳转
+
+})
+
+以上代码运行后会输出：
+
+&quot;click&quot;
+
+(2)event.preventDefault()方法网页中的元素有自己默认的行为，例如，单击超
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2016-05-04T01:54:57.000Z" class="post-list__meta--date date">2016-05-04</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/IT技术/">IT技术</a>
-</span><a class="btn-border-small" href="/2016/05/04/datatable扩展属性的应用/">继续阅读</a></div>
+      <div class="post-list__meta"><time datetime="2016-06-29T06:24:45.000Z" class="post-list__meta--date date">2016-06-29</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/jQuery/">jQuery</a>
+</span><a class="btn-border-small" href="/2016/06/29/EventProperties/">继续阅读</a></div>
       <hr class="post-list__divider" />
     </li>
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/05/03/SVG图形简单的拖拽/" title="link to post.title">SVG图形的拖拽</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2016/06/28/TraverseNode/" title="link to post.title">遍历节点</a></h2>
       <p class="excerpt">
     
-      使用过一款插件叫做“Svg Pan Zoom-jQuery”，这个插件可实现SVG图像的平移和缩放，可以通过编程的方式或通过鼠标/触摸事件。具体的使用方法可以在github上面可看到。英文版，很详细。
-打开jquery-svg-pan-zoom.js在github上的链接
-另外一款插件是在使用snap.svg基础上的拓展。
-打开snap.svg.zpd.js在github上的链接
-那什么是snap.svg呢？说实话，snap.svg的官网站中的使用api其实真的看不太懂，还好有位大牛简单翻译和整
+      1.children()方法该方法用于取得匹配元素的子元素集合。
+
+根据上图DOM树的结构，可以知道各个元素之间的关系以及它们子节点的个数.
+var $body = $(&amp;quot;body&amp;quot;).children();
+var $p = $(&amp;quot;p&amp;quot;).children();
+var $ul = $(&amp;quot;ul&amp;quot;).children();
+console.log($body.length)//&amp;lt;body&amp;gt;元素下有2个子元素
+console.
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2016-05-03T00:56:14.000Z" class="post-list__meta--date date">2016-05-03</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/IT技术/">IT技术</a>
-</span><a class="btn-border-small" href="/2016/05/03/SVG图形简单的拖拽/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/04/27/MARK-DOWN语法说明/" title="link to post.title">Markdown语法说明</a></h2>
-      <p class="excerpt">
-    
-      使用任何一款软件或者语法的时候，要知道使用该项的优点
-
-专注你的文字内容而不是排版样式。
-轻松的导出HTML、PDF和本身的.md文件。
-纯文本内容，兼容所有的文本编辑器与字处理软件。
-可读，直观。适合所有人的写作语言。
-
-尊重官方文档，下面给出官方语法说明链接
-
-创始人 John Gruber的Markdown语法说明
-Markdown中文版语法说明
-
-这里给出本姑娘比较常用的几种语法
-1. 标题（井号＃的多少表示了是几级标题）#This is H1
-##This is H2
-#####Thi
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-04-27T02:41:05.000Z" class="post-list__meta--date date">2016-04-27</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/IT技术/">IT技术</a>
-</span><a class="btn-border-small" href="/2016/04/27/MARK-DOWN语法说明/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/04/27/svg入门知识/" title="link to post.title">svg入门知识</a></h2>
-      <p class="excerpt">
-    
-      1. svg是什么？跟canvas的区别在哪里？首先，在学习svg之前，要先了解H5中的canvas和svg的区别。对此，w3school对此介绍的比较精炼。 SVG 
-
-SVG 是一种使用 XML 描述 2D 图形的语言。SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript 事件处理器。在 SVG 中，每个被绘制的图形均被视为对象。如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。
-
-Canvas
-
-Canvas 通过 
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-04-27T01:40:20.000Z" class="post-list__meta--date date">2016-04-27</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/IT技术/">IT技术</a>
-</span><a class="btn-border-small" href="/2016/04/27/svg入门知识/">继续阅读</a></div>
+      <div class="post-list__meta"><time datetime="2016-06-28T05:47:42.000Z" class="post-list__meta--date date">2016-06-28</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/jQuery/">jQuery</a>
+</span><a class="btn-border-small" href="/2016/06/28/TraverseNode/">继续阅读</a></div>
       <hr class="post-list__divider" />
     </li>
   
