@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>事件对象的属性 | SuperMei</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="爱好电影。">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="事件对象的属性 | SuperMei">
+    <meta name="twitter:description" content="爱好电影。">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="事件对象的属性 | SuperMei">
+    <meta property="og:description" content="爱好电影。">
+
+    
+    <meta name="author" content="Joh">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/favicon.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+
+    <link rel="canonical" href="http://yoursite.com/2016/06/29/EventProperties/"/>
+
+    
+</head>
+
+<body class="home-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 SuperMei 的主页"><img src="/images/logo2.jpg" width="80" alt="SuperMei logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for SuperMei">SuperMei</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">安静，低调，努力</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">热爱生活，热爱人民</br>热爱学习，热爱劳动</br>To be a super girl!</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/life">生活</a></li>
+            
+              <li class="navigation__item"><a href="/aboutme">微信</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/u/2165859140?is_all=1" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/Mayerblue" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  <li class="navigation__item">
+    <a href="http://liangmeizhi.lofter.com/" title="上Facebook找我" target="_blank">
+      <i class='social fa fa-facebook'></i>
+      <span class="label">Facebook</span>
+    </a>
+  </li>
+
+  
+<!-- Twitter -->
+
+  
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-purple"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-06-29T06:24:45.000Z" class="post-list__meta--date date">2016-06-29</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/IT技术/">IT技术</a>
+</span>
+    </div>
+    <h1 class="post-title">事件对象的属性</h1>
+  </header>
+
+  <section class="post">
+    <p>jQuery在遵循W3C规范下，对事件对象的常用属性进行了封装，使得事件处理在各大浏览器下都可以正常运行而不需要进行浏览器类型判断。</p>
+<h3 id="1-event-type"><a href="#1-event-type" class="headerlink" title="(1)event.type"></a>(1)event.type</h3><p>该方法的作用是可以获取到事件的类型。</p>
+<pre><code>$("a").click(function(){
+
+alert(event.type);//获取事件类型
+
+return false;//阻止链接跳转
+
+})</code></pre>
+
+以上代码运行后会输出：
+
+<pre><code>"click"</code></pre>
+
+<h3 id="2-event-preventDefault-方法"><a href="#2-event-preventDefault-方法" class="headerlink" title="(2)event.preventDefault()方法"></a>(2)event.preventDefault()方法</h3><p>网页中的元素有自己默认的行为，例如，单击超链接后悔跳转、单击“提交”按钮后表单会提交，该方法的作用是阻止默认的事件行为。</p>
+<h3 id="3-event-stopPropagation方法"><a href="#3-event-stopPropagation方法" class="headerlink" title="(3)event.stopPropagation方法"></a>(3)event.stopPropagation方法</h3><p>该方法的作用是阻止事件的冒泡。</p>
+<h3 id="4-event-target"><a href="#4-event-target" class="headerlink" title="(4)event.target"></a>(4)event.target</h3><p>event.target的作用是获取到触发事件的元素。jQuery对其进行封装后，避免了各个浏览器不同标准的差异。</p>
+<pre><code>$("a[href='http://google.com']").click(function(event){
+
+var tg=event.target;//获取对象事件
+
+alert("rg.href");
+
+return false;//阻止链接跳转
+
+})</code></pre>
+
+<p>以上代码运行后会输出：</p>
+<pre><code>"http://google.com"</code></pre>
+
+<h3 id="5-event-relatedTarget"><a href="#5-event-relatedTarget" class="headerlink" title="(5)event.relatedTarget"></a>(5)event.relatedTarget</h3><p>在标准的DOM中，mouseover和mouseout所发生的元素可以通过event.Target来访问，相关元素是通过event.relatedTarget来访问的。event.relatedTarget在mouseover中相当于IE浏览器的event.toElement,jQuery对其进行了对接，使之兼容各种浏览器。</p>
+<h3 id="6-event-pageX和event-pageY"><a href="#6-event-pageX和event-pageY" class="headerlink" title="(6)event.pageX和event.pageY"></a>(6)event.pageX和event.pageY</h3><p>该方法的作用是获取到光标相对于页面的x坐标和y坐标。如果没有使用jQuery时，那么IE浏览器中是用event.x/event.y，而在Firefox浏览器中是用event.x/event.y。如果页面上有滚动条，则还要加上滚动条的宽度和高度。</p>
+<pre><code>$("a").click(function(event){//获取鼠标相对于页面的坐标
+
+alert("Current mouseposition:"+event.pageX+","+event.pageY);
+
+return false;//阻止链接跳转
+
+})</code></pre>
+
+<h3 id="7-event-which"><a href="#7-event-which" class="headerlink" title="(7)event.which"></a>(7)event.which</h3><p>该方法的作用是在鼠标单击事件中获取到鼠标的左、中、右键；在键盘事件中获取键盘的按键。</p>
+<pre><code>$("a").click(function(e){
+
+alert(e.which);//1=鼠标左键；2=鼠标中键；3=鼠标右键
+
+})</code></pre>
+
+<h3 id="8-event-metaKey"><a href="#8-event-metaKey" class="headerlink" title="(8)event.metaKey"></a>(8)event.metaKey</h3><p>针对不同浏览器对键盘中的ctr按键的解释不通，jQuery也进行了封装，并规定event.metaKey为键盘事件中获取ctr按键</p>
+
+  </section>
+
+</article>
+
+
+<section class="post-comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="http://yoursite.com/2016/06/29/EventProperties/" data-title="事件对象的属性" data-url="http://yoursite.com/2016/06/29/EventProperties/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"supermei"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</section>
+
+
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2016 - 本站由 <a href="/">@Longbo Ma</a> 创建,
+        使用<a href="https://github.com/lenbo-ma/hexo-theme-vno">hexo-theme-vno</a>主题,
+        修改自<a href="http://github.com/onevcat/vno" target="_blank">Vno</a>
+    </span>
+</footer>
+
+        </div>
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+
+     
+</body>
+</html>
