@@ -5925,13 +5925,6 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  padding:7px;
-}
-tr{
-	border-bottom:1px solid #dadbdc;
-}
-td{
-padding:10px;		
 }
 body {
   width: 100%;
