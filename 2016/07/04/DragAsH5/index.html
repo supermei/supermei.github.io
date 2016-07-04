@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>HTML5拖拽与拖放 | SuperMei</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="爱好电影。">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="HTML5拖拽与拖放 | SuperMei">
+    <meta name="twitter:description" content="爱好电影。">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="HTML5拖拽与拖放 | SuperMei">
+    <meta property="og:description" content="爱好电影。">
+
+    
+    <meta name="author" content="Joh">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/favicon.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+
+    <link rel="canonical" href="http://yoursite.com/2016/07/04/DragAsH5/"/>
+
+    
+</head>
+
+<body class="home-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 SuperMei 的主页"><img src="/images/logo2.jpg" width="80" alt="SuperMei logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for SuperMei">SuperMei</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">安静，低调，努力</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">热爱生活，热爱人民</br>热爱学习，热爱劳动</br>To be a super girl!</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/life">图片</a></li>
+            
+              <li class="navigation__item"><a href="/aboutme">微信</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/u/2165859140?is_all=1" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/Mayerblue" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  <li class="navigation__item">
+    <a href="http://liangmeizhi.lofter.com/" title="上Facebook找我" target="_blank">
+      <i class='social fa fa-facebook'></i>
+      <span class="label">Facebook</span>
+    </a>
+  </li>
+
+  
+<!-- Twitter -->
+
+  
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-purple"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-07-04T05:38:15.000Z" class="post-list__meta--date date">2016-07-04</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/H5/">H5</a>
+</span>
+    </div>
+    <h1 class="post-title">HTML5拖拽与拖放</h1>
+  </header>
+
+  <section class="post">
+    <p>H5提供了拖拽与拖放的API，实现简单的拖拽效果，如果不是特别复杂的功能，可以不需要其他插件的支持。（Internet Explorer 9、Firefox、Opera 12、Chrome 以及 Safari 5 支持拖放。）</p>
+<p><strong>相关事件说明</strong></p>
+<p>1.DataTransfer 对象：退拽对象用来传递的媒介，使用一般为Event.dataTransfer。</p>
+<p>2.draggable 属性：就是标签元素要设置draggable=true，否则不会有效果。</p>
+<p>3.ondragstart事件:元素被拖拽的时候触发的事件，作用在被拖拽元素上。</p>
+<p>4.ondragenter事件:进入目标元素触发事件，作用在目标元素上。</p>
+<p>5.ondragover事件:拖拽元素在目标元素上移动的时候触发的事件，作用在目标元素上。</p>
+<p>6.ondrop事件:被拖拽的元素在目标元素上同时鼠标放开触发的事件，作用在目标元素上。</p>
+<p>7.ondragend事件:拖拽完成后触发事件，作用在被拖拽元素上。</p>
+<p>8.Event.preventDefault()方法:阻止默认方法执行。ondragover中一定要执行preventDefault(),否则ondrop事件不会被触发。</p>
+<p>9.Event.effectAllowed属性:拖拽的效果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">function allowDrop(ev)</span><br><span class="line">&#123;</span><br><span class="line">ev.preventDefault();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function drag(ev)</span><br><span class="line">&#123;</span><br><span class="line">ev.dataTransfer.setData(&quot;Text&quot;,ev.target.id);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function drop(ev)</span><br><span class="line">&#123;</span><br><span class="line">ev.preventDefault();</span><br><span class="line">var data=ev.dataTransfer.getData(&quot;Text&quot;);</span><br><span class="line">ev.target.appendChild(document.getElementById(data));</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div id=&quot;div1&quot; ondrop=&quot;drop(event)&quot; ondragover=&quot;allowDrop(event)&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;img id=&quot;drag1&quot; src=&quot;img_logo.gif&quot; draggable=&quot;true&quot; ondragstart=&quot;drag(event)&quot; width=&quot;336&quot; height=&quot;69&quot; /&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>上面的例子亲测在火狐浏览器中会打开其他页面，这跟ev.dataTransfer.getData(“Text”)有关，这个时候需要将“text”换成“val”,将所需要移动的图片换成“div”,div里面就不要加文字了，浏览器会根据这个文字进行搜索，打开新的页面。</p>
+
+  </section>
+
+</article>
+
+
+<section class="post-comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="http://yoursite.com/2016/07/04/DragAsH5/" data-title="HTML5拖拽与拖放" data-url="http://yoursite.com/2016/07/04/DragAsH5/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"supermei"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</section>
+
+
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2016 - 本站由 <a href="/">@Longbo Ma</a> 创建,
+        使用<a href="https://github.com/lenbo-ma/hexo-theme-vno">hexo-theme-vno</a>主题,
+        修改自<a href="http://github.com/onevcat/vno" target="_blank">Vno</a>
+    </span>
+</footer>
+
+        </div>
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+
+     
+</body>
+</html>
