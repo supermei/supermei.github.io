@@ -166,7 +166,7 @@ for (var i = 0, len = $ul.length; i &lt; len; i++) {
 <pre><code>var p1 = (&quot;p&quot;).next();//获取紧邻的同辈元素 
 </code></pre><p>得到的结果是：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li title=&quot;台式电脑&quot;&gt;台式电脑&lt;/li&gt;</span><br><span class="line">    &lt;li title=&quot;笔记本电脑&quot;&gt;笔记本电脑&lt;/li&gt;</span><br><span class="line">    &lt;li title=&quot;手机&quot;&gt;手机&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="pre-方法"><a href="#pre-方法" class="headerlink" title="pre()方法"></a>pre()方法</h3><p>该方法用于取得<strong>匹配元素前面紧邻的同辈元素</strong>。</p>
+<h3 id="prev-方法"><a href="#prev-方法" class="headerlink" title="prev()方法"></a>prev()方法</h3><p>该方法用于取得<strong>匹配元素前面紧邻的同辈元素</strong>。</p>
 <p>从DOM树的结构中可以知道ul元素的下一个同辈节点是p,因此可以通过prev()方法来获取p元素，代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p title=&quot;选择你最常用的设备&quot;&gt;你最常用的设备是？&lt;/p&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="4-sibling-方法"><a href="#4-sibling-方法" class="headerlink" title="4.sibling()方法"></a>4.sibling()方法</h3><p>该方法用于取得**匹配元素前后所有的同辈元素。</p>
