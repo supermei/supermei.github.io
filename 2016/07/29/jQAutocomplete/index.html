@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>SuperMei | 安静，低调，努力</title>
+    <title>jQueryAutocomplete | SuperMei</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="爱好电影。">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="SuperMei | 安静，低调，努力">
+    <meta name="twitter:title" content="jQueryAutocomplete | SuperMei">
     <meta name="twitter:description" content="爱好电影。">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="SuperMei | 安静，低调，努力">
+    <meta property="og:title" content="jQueryAutocomplete | SuperMei">
     <meta property="og:description" content="爱好电影。">
 
     
@@ -35,7 +35,7 @@
     <meta name="generator" content="hexo"/>
     
 
-    <link rel="canonical" href="http://yoursite.com"/>
+    <link rel="canonical" href="http://yoursite.com/2016/07/29/jQAutocomplete/"/>
 
     
 </head>
@@ -137,85 +137,53 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/07/29/jQAutocomplete/" title="link to post.title">jQueryAutocomplete</a></h2>
-      <p class="excerpt">
-    
-      参数说明serviceUrl:若是用ajax调用后台收取数据 就需要使用这个参数，后面跟上你的地址。
-maxHeight:这个是指你出来的下面的下拉框的最大高度。
-showNoSuggestionNotice(Boolean):是否显示没有匹配项的通知。
-noSuggestionNotice：显示通知信息。
-minChart(numer):这个是说你输入几个字符后开始匹配，一般默认为1；
-params：这个是传入的参数，和ajax传参基本一样。
-onSelect:这是会回调函数，就是你选中后，执
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-07-29T08:29:00.000Z" class="post-list__meta--date date">2016-07-29</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-07-29T08:29:00.000Z" class="post-list__meta--date date">2016-07-29</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
   <a class="tag-link" href="/tags/jQuery/">jQuery</a>
-</span><a class="btn-border-small" href="/2016/07/29/jQAutocomplete/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/06/29/EventProperties/" title="link to post.title">事件对象的属性</a></h2>
-      <p class="excerpt">
-    
-      jQuery在遵循W3C规范下，对事件对象的常用属性进行了封装，使得事件处理在各大浏览器下都可以正常运行而不需要进行浏览器类型判断。
-(1)event.type该方法的作用是可以获取到事件的类型。
-$(&quot;a&quot;).click(function(){
+</span>
+    </div>
+    <h1 class="post-title">jQueryAutocomplete</h1>
+  </header>
 
-alert(event.type);//获取事件类型
+  <section class="post">
+    <h2 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h2><p><strong>serviceUrl</strong>:若是用ajax调用后台收取数据 就需要使用这个参数，后面跟上你的地址。</p>
+<p><strong>maxHeight</strong>:这个是指你出来的下面的下拉框的最大高度。</p>
+<p><strong>showNoSuggestionNotice</strong>(Boolean):是否显示没有匹配项的通知。</p>
+<p><strong>noSuggestionNotice</strong>：显示通知信息。</p>
+<p><strong>minChart(numer)</strong>:这个是说你输入几个字符后开始匹配，一般默认为1；</p>
+<p><strong>params</strong>：这个是传入的参数，和ajax传参基本一样。</p>
+<p><strong>onSelect</strong>:这是会回调函数，就是你选中后，执行的，其中suggestion.value    ，  suggestion.data 就是你后台封装进去的值。</p>
+<p><strong>autoFill(Boolean)</strong>:要不要在用户选择时自动将用户当前鼠标所在的值填入到input框. Default: false。</p>
+<p><strong>selectFirst (Boolean)</strong>:如果设置成true,在用户键入tab或return键时autoComplete下拉列表的第一个值将被自动选择,尽管它没被手工选中(用键盘或鼠标).当然如果用户选中某个项目,那么就用用户选中的值. Default: true。 </p>
+<p><strong>width (Number)</strong>：指定下拉框的宽度. Default: input元素的宽度。</p>
+<p><strong>max (Number)</strong>： autoComplete下拉显示项目的个数.Default: 10。</p>
 
-return false;//阻止链接跳转
+  </section>
 
-})
-
-以上代码运行后会输出：
-
-&quot;click&quot;
-
-(2)event.preventDefault()方法网页中的元素有自己默认的行为，例如，单击超
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-06-29T06:24:45.000Z" class="post-list__meta--date date">2016-06-29</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/jQuery/">jQuery</a>
-</span><a class="btn-border-small" href="/2016/06/29/EventProperties/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/06/28/TraverseNode/" title="link to post.title">遍历节点</a></h2>
-      <p class="excerpt">
-    
-      1.children()方法该方法用于取得匹配元素的子元素集合。
-
-根据上图DOM树的结构，可以知道各个元素之间的关系以及它们子节点的个数.
-var $body = $(&amp;quot;body&amp;quot;).children();
-var $p = $(&amp;quot;p&amp;quot;).children();
-var $ul = $(&amp;quot;ul&amp;quot;).children();
-console.log($body.length)//&amp;lt;body&amp;gt;元素下有2个子元素
-console.
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-06-28T05:47:42.000Z" class="post-list__meta--date date">2016-06-28</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/jQuery/">jQuery</a>
-</span><a class="btn-border-small" href="/2016/06/28/TraverseNode/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
+</article>
 
 
-
-</div>
+<section class="post-comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="http://yoursite.com/2016/07/29/jQAutocomplete/" data-title="jQueryAutocomplete" data-url="http://yoursite.com/2016/07/29/jQAutocomplete/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"supermei"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</section>
 
 
 
